@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage 2.0</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0; 
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 2opx;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px regba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        div:last-of-type {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <article>
+        <section>
+            <h1>My First Webpage (now with JavaScript)</h1>
+            <div>
+                <img src="myphoto.jpg" style="max-width: 100%; height: auto; border-radius: 8px;"
+                <h2>My Favorite Music Artists</h2>
+                <button onclick="showItems()">Show Favs</button>
+                <ul id="hidden-list" style="display: none;">
+                    <li>Bruno Mars</li>
+                    <li>Pierce the Viel</li>
+                    <li>Willow</li>
+                </ul>
+            </div>
+            <div>
+                <h2 id="para-heading"></h2>
+                <p id="para-body"></p>
+            </div>
+            <button onclick="showDateAndTime()">Show Date and Time</button>
+        </section>
+    </article>
+
+<style>
+
+</style>
+
+<script>
+    function showItems () {
+        document.getElementById("hidden-list").style.display = "block";
+    }
+
+    document.getElementById("para-heading").innerHTML = "A Little About Me"
+    document.getElementById("para-body").innerHTML = "I’m all about enjoying the little things in life! I love going to live music shows, getting creative with drawing and painting, and spending time outside in nature. Baking is one of my favorite hobbies, and nothing beats hanging out with friends and family.";
+
+    function showDateAndTime () {
+        document.body.innerHTML += "<div> Today's date and time is " + new Date() + "</div>";
+    }
+</script>
+
+</body>
+</html>
